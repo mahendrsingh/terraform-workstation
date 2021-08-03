@@ -1,0 +1,53 @@
+Terraform with AWS providers.
+_______________________________
+
+ Providers :
+       https://registry.terraform.io/browse/providers
+       
+ aws link :
+   https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
+
+Git repo link:
+    https://github.com/mahendrsingh/terraform-workstation.git
+    
+
+::::
+
+
+Terraform is our tool of choice to manage the entire lifecycle of infrastructure using infrastructure as code. That means declaring infrastructure components in configuration files that are then used by Terraform to provision, adjust and tear down infrastructure in various cloud providers.
+
+:::
+
+Providers: Terraform distriburted (tested by terraform ) - plugins will automatically install by terraform when you will run terraform init.
+           3rd party (ex- personal providers used by orgnisation) - plugins needs manually install
+
+terraform init - intilize & download the required plugins assosiated with the providers
+
+terraform plan - plan & create a resources chart that will going to be created .
+
+terraform apply - will create & deploy the resources on th provicers you mentioned
+
+
+terraform destroy - remove & rollback the changes & resources mentioned in tf file.
+
+** if you multiple tf file & want to destroy only one file resources , there are two way:
+
+:- comment out the resource block & run simple cmd
+:- run the cmd and target the specific resource
+    $ terraform destroy -target resourcename(used in HCL).name(thatyouhavedeclear)
+    
+    
+    
+State files:  terraform stores the state of the infrastructure that is being created from the tf file.
+               This state files allow terraform to map the real world resources to your existing configuration.
+               
+      To get the current state if someone did the changes manually.
+      refresh the state : terraform refresh 
+      Read the tf state file:  terraform show
+      
+      
+      
+ 
+ 
+
+
